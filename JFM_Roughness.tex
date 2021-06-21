@@ -123,7 +123,35 @@ Input: Discretized log(PS) and PDF$/k_t$, $k_{99}$, $k_{t}$, $\lambda_0/k_t$, $\
 Output: averaged prediction ($\mu_{\Delta U^+}$) \& uncertainty prediction ($\sigma_{\Delta U^+}$)
 \section{Results}
 \subsection{0th round}
-
+\begin{figure}[H]
+\centering
+\input{tikz/Uncertainty0}
+\end{figure}
+\begin{figure}[H]
+\centering
+\input{tikz/Round1Check}
+\end{figure}
+\subsection{1st round}
+\begin{figure}[H]
+\centering
+\input{tikz/Uncertainty1}
+\end{figure}
+\begin{figure}[H]
+\centering
+\input{tikz/Round2Check}
+\end{figure}
+\subsection{Prediction of realistic surfaces}
+\begin{table}[H]
+\centering
+\begin{tabular}{ccccc}
+Surface&$\Delta U^+_{DNS}$&$\Delta U^+_{DNN}$&$\sigma_{\Delta U^+}$&error\%\\[3pt]
+Ice 1& 4.84&4.47&0.44&7.6\%\\
+Ice 2& 2.15&2.13&0.24&1.0\%\\
+Ice 3& 3.76&3.70&0.40&1.6\%\\
+Sandpaper& 5.36&5.37&0.39&0.4\%\\
+IC 1& 8.76&8.12&1.36&7.3\%
+\end{tabular}
+\end{table}
 \end{document}
 %
 % ****** End of file aipsamp.tex ******

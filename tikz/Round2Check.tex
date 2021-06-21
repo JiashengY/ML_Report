@@ -1,0 +1,245 @@
+% This file was created by tikzplotlib v0.9.8.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{1,0.647058823529412,0}
+
+\begin{axis}[
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=white!80!black},
+tick align=outside,
+tick pos=left,
+x grid style={white!69.0196078431373!black},
+xlabel shift=8pt,
+xmajorgrids,
+xmin=-1.8, xmax=37.8,
+xtick style={color=black},
+y grid style={white!69.0196078431373!black},
+ylabel={Error \%},
+xtick=\empty,
+ymajorgrids,
+ymin=0, ymax=200,
+x dir=reverse,
+ytick style={color=black}
+]
+
+\path [draw=gray!80, semithick]
+(axis cs:3.5,3.17645716274773)
+--(axis cs:3.5,8.19621165175358);
+
+\path [draw=gray!80, semithick]
+(axis cs:15,9.01442848247752)
+--(axis cs:15,29.3468774428032);
+
+\path [draw=gray!80, semithick]
+(axis cs:29,22.610929102382243)
+--(axis cs:29,55.05610041860658);
+
+\addplot [semithick,gray!50, mark=*, mark size=2, mark options={solid}, only marks, forget plot]
+table {%
+3.5 5.68633440725066
+};
+\addplot [semithick,gray!50, mark=*, mark size=2, mark options={solid}, only marks, forget plot]
+table {%
+15 19.1806529626404
+};
+\addplot [semithick,gray!50, mark=*, mark size=2, mark options={solid}, only marks, forget plot]
+table {%
+29 38.83351476049441
+};
+
+
+\path [draw=black, semithick]
+(axis cs:3.5,2.56961015437131)
+--(axis cs:3.5,8.06098429429232);
+
+\path [draw=black, semithick]
+(axis cs:15,6.15109385976595)
+--(axis cs:15,18.0514632783993);
+
+\path [draw=black, semithick]
+(axis cs:29,13.0325384653026)
+--(axis cs:29,30.6161981076189);
+
+\addplot [semithick, green, mark=asterisk, mark size=3, mark options={solid}, only marks]
+table {%
+0 5.93254494293175
+1 0.435062330596306
+2 5.25470461164202
+3 7.62483830028643
+4 4.51665649637144
+5 9.99018984629695
+6 3.45308404219778
+};
+\addlegendentry{Mean error=5.3\% (\color{green}$\downarrow$0.4\%\color{black})}
+\addplot [semithick, color0, mark=asterisk, mark size=3, mark options={solid}, only marks]
+table {%
+8 2.7939669041468
+9 1.55860049158419
+10 5.79096260223459
+11 21.1545494104429
+12 14.7833214762561
+13 11.229305485632
+14 18.6688747027177
+15 26.9897646667454
+16 3.07978104527404
+17 4.99398280446327
+18 0.145779461748396
+19 3.54807282800117
+20 14.7173071976516
+21 17.8590454248618
+22 10.2283554698795
+23 6.07878713368356
+};
+\addlegendentry{Mean error=12.1\% (\color{green}$\downarrow$7\%\color{black})}
+\addplot [semithick, red, mark=asterisk, mark size=3, mark options={solid}, only marks]
+table {%
+25 16.3878895959083
+26 43.3336892544958
+27 21.2797920588952
+28 16.4015572375316
+29 25.8394115768906
+30 0.868080986195027
+31 7.22436903388556
+32 25.7271169055641
+33 20.971383692817
+34 27.1603714139663
+35 34.8743893949192
+36 18.7870619330047
+};
+\addlegendentry{Mean error=21.8\% (\color{green}$\downarrow$17\%\color{black})}
+\addplot [semithick, gray!60, mark=asterisk, mark size=3, mark options={solid}, only marks]
+table {%
+0 2.22473274282858
+1 6.17568729913723
+2 7.03770402189973
+3 6.85738470355908
+4 1.61924657437824
+5 6.49385564091617
+6 9.39572986803556
+};
+
+\addplot [semithick, gray!60, mark=asterisk, mark size=3, mark options={solid}, only marks]
+table {%
+8 5.51628474042959
+9 16.594371164206
+10 13.8173060272643
+11 22.3665577244638
+12 8.77899451422714
+13 35.3804103850014
+14 10.4852394434414
+15 9.56158291294631
+16 0.376912918129039
+17 35.9350832192162
+18 10.9999406426262
+19 65.3106020315804
+20 25.2050499139577
+21 18.5092085138918
+22 2.54674374301578
+23 60.6741344428264
+};
+
+
+\addplot [semithick, gray!60, mark=asterisk, mark size=3, mark options={solid}, only marks]
+table {%
+25 35.5555979882949
+26 5.0628772567327
+27 66.1259869695715
+28 49.0897179046975
+29 51.9361378439765
+30 69.1321658281645
+31 62.0343434097132
+32 6.56924853906733
+33 23.7511928423115
+34 66.6414806305593
+35 43.9617410240332
+36 18.7509609003825
+};
+
+\addplot [semithick, red, dashed, forget plot]
+table {%
+7 0
+7 70
+};
+\addplot [semithick, red, dashed, forget plot]
+table {%
+24 0
+24 70
+};
+\addplot [semithick, black, mark=*, mark size=2, mark options={solid}, only marks, forget plot]
+table {%
+3.5 5.31529722433181
+};
+\addplot [semithick, black, mark=*, mark size=2, mark options={solid}, only marks, forget plot]
+table {%
+15 12.1012785690826
+};
+\addplot [semithick, black, mark=*, mark size=2, mark options={solid}, only marks, forget plot]
+table {%
+29 21.8243682864608
+};
+\end{axis}
+
+\begin{axis}[
+axis y line=right,
+tick align=outside,
+x grid style={white!69.0196078431373!black},
+xmin=-1.8, xmax=37.8,
+xtick pos=left,
+xtick style={color=black},
+xtick={0,15,31},
+x dir=reverse,
+xticklabels={\footnotesize Low uncertainty,\footnotesize Mid uncertainty,\footnotesize New high uncertainty},
+y grid style={white!69.0196078431373!black},
+ylabel={$\sigma_{\Delta U^+}$},
+ymin=-0.403623397648335, ymax=10.4551394239068,
+ytick pos=right,
+ytick style={color=black},
+yticklabel style={anchor=west}
+]
+\addplot [semithick, white!50.1960784313725!black, dashed]
+table {%
+0 0.139379635453224
+1 0.156526684761047
+2 0.185173764824867
+3 0.192545801401138
+4 0.200319945812225
+5 0.200813665986061
+6 0.215275228023529
+};
+\addplot [semithick, white!50.1960784313725!black, dashed]
+table {%
+8 0.165517628192902
+9 0.256383925676346
+10 0.334760546684265
+11 0.359106510877609
+12 0.382800102233887
+13 0.407728046178818
+14 0.421053946018219
+15 0.447502642869949
+16 0.447807341814041
+17 0.473243951797485
+18 0.489721238613129
+19 0.492278575897217
+20 0.498553097248077
+21 0.508587896823883
+22 0.577086448669434
+23 0.60416553735733
+};
+\addplot [semithick, white!50.1960784313725!black, dashed]
+table {%
+25 0.625356137752533
+26 0.630939066410065
+27 0.640558183193207
+28 0.641968667507172
+29 0.648204743862152
+30 0.654302656650543
+31 0.735572516918182
+32 0.780290424823761
+33 0.788357317447662
+34 0.835924208164215
+35 0.870814085006714
+36 1.04473114013672
+};
+\end{axis}
+
+\end{tikzpicture}
