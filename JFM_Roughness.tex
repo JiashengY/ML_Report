@@ -1,6 +1,6 @@
 
-\documentclass{jfm}
-\usepackage{showframe}
+\documentclass{article}
+%\usepackage{showframe}
 \usepackage[english]{babel}
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
@@ -54,28 +54,26 @@ rgb255=(225,185,82)
 rgb255=(252,206,46)
 rgb255=(249,251,14)
         }}
-        \shorttitle{ML report}
-\shortauthor{J.Yang}
     \title{ML report}
 % Force line breaks with \\
 
-\author{Jiasheng Yang\aff{1}\corresp{\email{jiasheng.yang@kit.edu}}}
+\author{Jiasheng Yang}
 
-\affiliation{\aff{1}Institute of Fluid Mechanics, Karlsruhe Institute of Technology, Karlsruhe, Germany}
+%\affiliation{\aff{1}Institute of Fluid Mechanics, Karlsruhe Institute of Technology, Karlsruhe, Germany}
 
 \begin{document}
-
+\maketitle
 \section{Simulation setup}
 Turbulent channel with constant pressure gradient (CPG).
 $Re_\tau=u_\tau(H-k_{md})/\nu$, where $u_tau=\sqrt{\tau_w/rho}$ and $\tau_w=-P_x(H-k_{md})$.
-\begin{figure}
+\begin{figure}[H]
 \centering
    % \input{tikz/domain}
    \includegraphics[width=10cm]{Figures/Domain.png}
     \caption{Schematic representation of simulation domain with an example pseudo-realistic surface mounted. Normalization of lengths with $H$ is applied in the figure.}
     \label{fig:domain}
 \end{figure}
-\begin{table}
+\begin{table}[H]
     \centering
     \begin{tabular}{ccccccccc}
          SurfaceID&$Re_\tau$&$L_x/H$&$L_z/H$&$N_x$&$N_z$&$\Delta_x^+$&$\Delta_z^+$&$\Delta_{y,k}^+$\\[3pt]
@@ -86,25 +84,44 @@ $Re_\tau=u_\tau(H-k_{md})/\nu$, where $u_tau=\sqrt{\tau_w/rho}$ and $\tau_w=-P_x
 \end{table}
 \section{Roughness configuration}
 \label{Roughness}
-Identical $Re_\tau$, variying $k_99$
-\begin{figure}
-\includegraphics[width=0.6\linewidth]{Figures/Pairplot.png}
+Identical $Re_\tau$, variying $k_{99}=\Phi_{0.08,0.02}$
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{Figures/Pairplot.png}
 \end{figure}
 \subsection{PDF}
 Weibull:$$f(k)= \lambda \beta^\lambda k^{(\lambda-1)}e^{-(\beta k)^\lambda},$$ 
 Bimodal:$$k(i)=min\{\Phi_{0,1}(i),\Phi_{-\lambda,\lambda}(i)\},$$
 Gaussian:$$f(i)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{i-\mu}{\sigma})^2}$$
 \subsection{PS}
-$\lambda_0=0.8H$ (1-199), $=1H$ (200-399).
-$\lambda_1=0.04H$.
-PS normalized by $\lambda_{diff}=\lambda_0-\lambda_1$.
-Roll-off length: $L_r/\lambda_{diff}=\Phi_{0.4,0.04}$.
-PS slope:$\theta_p=-|\Phi_{0.75,0.3}|$.
-Randomize along PS(20): PS$(i)-\Phi_{0,0.5*i}$.
-\begin{figure}
+\begin{itemize}
+\item $\lambda_0=0.8H$ (Surface ID 0-199), $=1H$ (Surface ID 200-399).
+\item $\lambda_1=0.04H$.
+\item PS normalized by $\lambda_{diff}=\lambda_0-\lambda_1$.
+\item Roll-off length: $L_r/\lambda_{diff}=\Phi_{0.4,0.04}$.
+\item PS slope:$\theta_p=-|\Phi_{0.75,0.3}|$.
+\item Randomize along PS(20): PS$(i)-\Phi_{0,0.5*i}$.
+\end{itemize}
+\begin{figure}[H]
+\centering
 \input{tikz/PS_Sketch3.tex}
 \caption{PS Sketch}
 \end{figure}
+\section{Active learning}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{Figures/ALFramework.png}
+\caption{Flow chart of the present active learning framework}
+\end{figure}
+\subsection{Ensemble deep neural network}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\linewidth]{Figures/DNN1.png}X 50
+\caption{Sketch of ensemble DNN, output: averaged prediction ($\mu_{\Delta U^+}$) \& uncertainty prediction ($\sigma_{\Delta U^+}$)}
+\end{figure}
+Input: Discretized log(PS) and PDF$/k_t$, $k_{99}$, $k_{t}$, $\lambda_0/k_t$, $\lambda_1/k_t$.\\
+Output: averaged prediction ($\mu_{\Delta U^+}$) \& uncertainty prediction ($\sigma_{\Delta U^+}$)
+
 \end{document}
 %
 % ****** End of file aipsamp.tex ******
