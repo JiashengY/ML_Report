@@ -65,7 +65,7 @@ rgb255=(249,251,14)
 \maketitle
 \section{Simulation setup}
 Turbulent channel with constant pressure gradient (CPG).
-$Re_\tau=u_\tau(H-k_{md})/\nu$, where $u_tau=\sqrt{\tau_w/rho}$ and $\tau_w=-P_x(H-k_{md})$.
+$Re_\tau=u_\tau(H-k_{md})/\nu$, where $u_\tau=\sqrt{\tau_w/\rho}$ and $\tau_w=-P_x(H-k_{md})$.
 \begin{figure}[H]
 \centering
    % \input{tikz/domain}
@@ -78,7 +78,7 @@ $Re_\tau=u_\tau(H-k_{md})/\nu$, where $u_tau=\sqrt{\tau_w/rho}$ and $\tau_w=-P_x
     \begin{tabular}{ccccccccc}
          SurfaceID&$Re_\tau$&$L_x/H$&$L_z/H$&$N_x$&$N_z$&$\Delta_x^+$&$\Delta_z^+$&$\Delta_{y,k}^+$\\[3pt]
          0-199&500&2.4&0.8&480&160&2.5&2.5&$\approx1.74$\\
-         200-399&500&3&1&576&192&2.6&2.6&$\approx1.74$
+         200-399&500&3.0&1.0&576&192&2.6&2.6&$\approx1.74$
     \end{tabular}
     \caption{Simulation domain setup}
 \end{table}
@@ -121,6 +121,8 @@ Gaussian:$$f(i)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{i-\mu}{\sigma})
 \end{figure}
 Input: Discretized log(PS) and PDF$/k_t$, $k_{99}$, $k_{t}$, $\lambda_0/k_t$, $\lambda_1/k_t$.\\
 Output: averaged prediction ($\mu_{\Delta U^+}$) \& uncertainty prediction ($\sigma_{\Delta U^+}$)
+\section{Results}
+\subsection{0th round}
 
 \end{document}
 %
