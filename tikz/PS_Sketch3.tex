@@ -1,0 +1,76 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={PS},
+            xlabel={wavenumber},
+            ymin=0, ymax=1.5,
+			xmax=1.3,
+			xmin=0,
+			xtick=\empty,
+			ytick=\empty,
+            width=.8\textwidth,
+            height=.8\textwidth,
+            label style={font=\footnotesize},
+            legend style={font=\tiny,anchor=south east},
+                        legend pos=south east,
+            tick label style={font=\footnotesize}
+            ]
+
+			\addplot [
+            black,thick,no marks,
+            ]
+            coordinates{
+            (0.2, 1)
+            (0.5, 1)
+            (1,0)
+            };
+			\draw[<->,red] (0.2,1.1) -- (0.5,1.1);
+			\node[] at (0.35,1.2) {\footnotesize{Roll-off length $L_r$}};
+			\node[right] at (0.55,0.95) {\footnotesize{PS slope $\Theta_p$}};
+			\addplot [
+            black,thick,only marks,mark=*,
+            ]
+            coordinates{
+            (0.2, 1)
+            (0.3, 1)
+			(0.4, 1)
+			(0.5, 1)
+			(0.6,0.77)
+			(0.7,0.53)
+			(0.8,0.38)
+			(0.9,0.26)
+            };
+									\addplot[
+        only marks,
+        mark=X,
+        black,
+        error bars/.cd, y dir=both, y explicit,
+    ] plot coordinates {
+                    (0.6, 0.8)+=(0,0.05) -=(0,0.05)
+    };
+										\addplot[
+        only marks,
+        mark=X,
+        black,
+        error bars/.cd, y dir=both, y explicit,
+    ] plot coordinates {
+                    (0.7, 0.6)+=(0,0.075) -=(0,0.075)
+					    };
+							\addplot[
+        only marks,
+        mark=X,
+        black,
+        error bars/.cd, y dir=both, y explicit,
+    ] plot coordinates {
+                    (0.8, 0.4)+=(0,0.1) -=(0,0.1)
+					    };
+							\addplot[
+        only marks,
+        mark=X,
+        black,
+        error bars/.cd, y dir=both, y explicit,
+    ] plot coordinates {
+                    (0.9, 0.2)+=(0,0.125) -=(0,0.125)
+					    };
+        \end{axis}
+        \end{tikzpicture}
