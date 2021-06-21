@@ -1,0 +1,46 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$\overline{\gamma_{kf}^2}$},
+            xlabel={$\lambda/H$},
+            ymin=0, ymax=.8,
+			xmin=0.01,xmax=2.4,
+            width=1\textwidth,
+            height=.9\textwidth,
+			xmode=log,
+            legend style={font=\tiny,anchor=south east},
+                        legend pos=south east,
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            % \fill[color=black!30,opacity=50] (0.8,0) -- (0.8,1) -- (2,1) -- (2,0) -- cycle;
+            %  \fill[color=black!60,opacity=90] (1.6,0) -- (1.6,1) -- (2,1) -- (2,0) -- cycle;
+            \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Re1.csv};
+            \addlegendentry{$G24M2-1000$}
+            			            \addplot [
+            black,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Re2.csv};
+            \addlegendentry{$G24M2-750$}
+			            \addplot [
+            black,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Re3.csv};
+            \addlegendentry{$G24M2-500$}
+            			            \addplot [
+            black,dashdotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Re4.csv};
+            \addlegendentry{$G24M2-250$}
+%\draw [dashed,red] (0.08,0) -- (0.08,1);
+%\draw [dashed,red] (0.6,0) -- (0.6,1);
+\draw [dashed,red] (0.08,0) -- (0.08,1);
+\draw[->] (0.6,0.7) -- (0.15,0.7);
+\node[] at (0.3,0.74) {$Re_\tau$};
+
+
+        \end{axis}
+        \end{tikzpicture}

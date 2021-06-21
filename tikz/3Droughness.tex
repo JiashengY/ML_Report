@@ -1,0 +1,81 @@
+\begin{tikzpicture}
+\pgfplotsset{
+    scale only axis,
+}
+\begin{axis}[
+view={-30}{20},
+		xlabel={$L_x/H$},
+		ylabel={$L_z/H$},
+		zlabel={$L_y/H$},
+		unit vector ratio=1 1 1,
+		xmin=0,xmax=8,
+		ymin=0,ymax=4,
+		zmin=0,zmax=2,
+		y dir=reverse,
+		clip=true,
+		set layers,
+		clip mode=individual,
+		height=.7\textwidth,
+		width=.9\textwidth,
+		xtick={0,2,...,8},
+		ytick={0,2,...,4},
+		ztick={0,1,2},
+		label style={font=\footnotesize},
+		tick label style={font=\footnotesize},
+	]
+	\pgfmathparse{atan(tan(-50)*sin(70))}
+  \let\a=\pgfmathresult
+  \pgfmathparse{atan(tan(90+50)*sin(70))}
+  \let\b=\pgfmathresult  
+
+	\centering
+%\addplot3 [thick, color=blue, on layer=axis background]
+%graphics[xmin=0,ymin=0,xmax=8,ymax=4,zmin=0,zmax=0]{Figures/G24Fc.png};
+
+\fill[color=gray!30,opacity=100] (0,0.8,0) -- (2.4,0.8,0) -- (2.4,0.8,2) -- (0,0.8,2) -- cycle;
+\fill[color=gray!30,opacity=100] (0,0,0) -- (0,0.8,0) -- (0,0.8,2) -- (0,0,2) -- cycle;
+\fill[color=gray!30,opacity=100] (0,0,2) -- (0,0.8,2) -- (2.4,0.8,2) -- (2.4,0,2) -- cycle;
+\fill[color=gray!80,opacity=100] (0,0.4,0) -- (2,0.4,0) -- (2,0.4,2) -- (0,0.4,2) -- cycle;
+\fill[color=gray!80,opacity=100] (0,0,0) -- (0,0.4,0) -- (0,0.4,2) -- (0,0,2) -- cycle;
+\fill[color=gray!80,opacity=100] (0,0,2) -- (0,0.4,2) -- (2,0.4,2) -- (2,0,2) -- cycle;
+\draw[-,black] (2.4,0,0) -- (8,0,0);
+
+%\draw[-,black] (0,0,0) -- (2,0,0);
+\draw[-,dashed,black] (2,0,0) -- (2,0.4,0);
+\draw[-,dashed,black] (2,0.4,0) -- (0,0.4,0);
+\draw[-,black] (0,0.4,0) -- (0,0,0);
+
+
+\draw[-,black] (0,0,2) -- (2,0,2);
+\draw[-,black] (2,0,2) -- (2,0.4,2);
+\draw[-,black] (2,0.4,2) -- (0,0.4,2);
+\draw[-,black] (0,0.4,2) -- (0,0,2);
+
+\draw[-,black] (0,0,2) -- (0,0,0);
+\draw[-,dashed,black] (2,0,2) -- (2,0,0);
+\draw[-,dashed,black] (2.4,0,2) -- (2.4,0,0);
+\draw[-,black] (2.4,0.8,2) -- (2.4,0.8,0);
+\draw[-,dashed,black] (2,0.4,2) -- (2,0.4,0);
+\draw[-,black] (0,0.4,2) -- (0,0.4,0);
+\draw[-,black] (0,0.8,2) -- (0,0.8,0);
+
+\draw[-,dashed,black] (0,0,0) -- (2.4,0,0);
+\draw[-,dashed,black] (2.4,0,0) -- (2.4,0.8,0);
+\draw[-,black] (2.4,0.8,0) -- (0,0.8,0);
+\draw[-,black] (0,0.8,0) -- (0,0,0);
+
+
+\draw[-,black] (0,0,2) -- (2.4,0,2);
+\draw[-,black] (2.4,0,2) -- (2.4,0.8,2);
+\draw[-,black] (2.4,0.8,2) -- (0,0.8,2);
+\draw[-,black] (0,0.8,2) -- (0,0,2);
+
+\fill[pattern=north west lines, pattern color=gray] (0,0.8,0) -- (8,0.8,0) -- (8,4,0) -- (0,4,0) -- cycle;
+\fill[pattern=north west lines, pattern color=gray] (2.4,0,0) -- (8,0,0) -- (8,0.8,0) -- (2.4,0.8,0) -- cycle;
+\fill[pattern=north west lines, pattern color=gray] (0,0,2) -- (8,0,2) -- (8,4,2) -- (0,4,2) -- cycle;
+%graphics[xmin=0,ymin=0,xmax=8,ymax=4,zmin=0,zmax=0]{Figures/G24Fc.png};
+%\node[gray,left] at (axis cs: 2,0.2,0) {\tiny$M2$};
+%\node[gray,left] at (axis cs: 2.4,0.6,0) {\tiny$M1$};
+%\node[gray,left] at (axis cs: 8,3.8,0) {\tiny$F$};
+\end{axis}
+\end{tikzpicture}

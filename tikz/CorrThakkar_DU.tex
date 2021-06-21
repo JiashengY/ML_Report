@@ -1,0 +1,44 @@
+\begin{tikzpicture}
+\begin{axis}[view={0}{90},
+		xlabel=$Sk$,
+		ylabel=ES,
+		%title=$\Delta U^+$,
+		%colormap/parula,
+		mesh/cols=50,
+		height=.8\linewidth,
+		width=.8\linewidth,
+		colorbar,
+				colorbar style={
+				xlabel=$\Delta U^+$,
+				xlabel shift = 10.5 pt,
+		width=0.2cm
+		}
+		]
+\addplot3 [surf,shader=interp]
+  table[x=X, y=Z, z=Y, col sep=comma] {CSV/Thakkar_DU.csv};
+  			            \addplot3 [
+            black,only marks,mark=square, mark size=1.5pt
+            ]
+            coordinates{
+            (0,0.54,1)			
+			(0,0.52,1)
+			(0,0.41,1)
+			(0,0.36,1)
+			(0.48,0.56,1)			
+			(0.48,0.54,1)
+			(0.48,0.42,1)
+			(0.48,0.37,1)
+			};
+			  			            \addplot3 [
+            black,only marks,mark=square, mark size=1.5pt
+            ]
+            coordinates{
+			(-0.48,0.56,1)			
+			(-0.48,0.54,1)
+			(-0.48,0.42,1)
+			(-0.48,0.37,1)			
+			};
+			\draw[color=red,thick] (-0.5, 0.06 ) rectangle (0.6,0.32);
+			\node[red,right] at (axis cs: -0.150,0.2) {\tiny Fitting data};
+\end{axis}
+\end{tikzpicture}

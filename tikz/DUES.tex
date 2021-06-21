@@ -1,0 +1,82 @@
+        \begin{tikzpicture}[scale=0.85]
+        \centering
+        \begin{axis}[
+            ylabel={$\Delta U^+$},
+            xlabel={ES},
+            ymin=0, ymax=12,
+			xmax=0.9,
+			xmin=0,
+            width=.6\textwidth,
+            height=.5\textwidth,
+            label style={font=\footnotesize},
+            legend style={font=\tiny,anchor=south east},
+                        legend pos=south east,
+            tick label style={font=\footnotesize}
+            ]
+			\addplot [
+            black,only marks,thick,mark=o,
+            ]
+            coordinates{
+            (0.57, 7.35)
+            (0.54, 7.34)
+            (0.44,6.92)
+            (0.39,6.87)
+            };
+			\addlegendentry{$Sk=0.48$}
+						\addplot [
+            black!60,only marks,thick,mark=o,
+            ]
+            coordinates{
+            (0.54,6.56)
+            (0.53,6.59)
+            (0.43,6.20)
+            (0.37,5.88)
+            };
+			\addlegendentry{$Sk=0$}
+			\addplot [
+            black!30,only marks,thick,mark=o,
+            ]
+            coordinates{
+            (0.57,5.87)
+            (0.54,6.06)
+            (0.44,5.80)
+            (0.39,5.58)
+            };
+			\addlegendentry{$Sk=-0.48$}
+						\addplot [
+            black,only marks,thick,mark=*,
+            ]
+            coordinates{
+            (0.041708,0.5762)
+            (0.049156,0.7582)
+            (0.0571,1.658)
+            (0.063059,2.8307)
+            (0.083416,3.249)
+            (0.100298,4.246)
+            (0.144489,6.3488)
+            (0.147964,7.6226)
+            (0.206058,8.1887)
+            (0.298411,9.5029)
+            (0.381827,10.1095)
+            (0.550149,10.4431)
+            (0.764151,10.2915)
+            };
+			\addlegendentry{~\citet{napoli_armenio_demarchis_2008}, $Re_\tau\approx395$}
+				\addplot [
+            gray!50,dashed,thick,
+            ]
+            coordinates{
+(0.35,0)
+(0.35,12)
+            };
+            				\addplot [
+            gray!50,dashed,thick,
+            ]
+            coordinates{
+(0.30,0)
+(0.30,12)
+            };
+                \node[right] at (0.35,11) {\footnotesize{Roughness regime}};
+                                \node[left] at (0.3,11) {\footnotesize{Waviness regime}};
+        \end{axis}
+        \end{tikzpicture}

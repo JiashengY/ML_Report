@@ -1,0 +1,31 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={PDF},
+            xlabel={k/H},
+            ymax=0.05,
+            width=.8\textwidth,
+            height=.8\textwidth,
+            legend style={font=\tiny,anchor=north west,fill=none},
+            legend pos=north west,
+            legend cell align={left},
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/HPDG14F1.csv};
+    \node[black,right] at (axis cs: -0.01,0.025) {$Sk=0.48$};
+			\addplot [
+            black,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/HPDN14F1.csv};
+    \node[black] at (axis cs: 0.061,0.03) {$Sk=0$};
+						\addplot [
+            black,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/HPDP14F1.csv};
+    \node[black,right] at (axis cs: 0.07,0.025) {$Sk=-0.48$};
+        \end{axis}
+        \end{tikzpicture}

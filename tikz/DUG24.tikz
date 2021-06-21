@@ -1,0 +1,50 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$\Delta U^+$},
+            xlabel={$(y-d)^+$},
+            ymin=-2, ymax=8,
+			xmin=1,xmax=500,
+            width=1.05\textwidth,
+            height=0.8\textwidth,
+			xmode=log,
+            legend style={font=\tiny,anchor=south east},
+            legend pos= south east,
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            \addplot [
+            black,dashed,thick,
+            ]
+            coordinates{
+            (160, 10)
+            (160, -5)
+            };
+            \addlegendentry{critical height $y_c$}
+						\addplot [
+            red,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/DUprofileG24mf23.csv};
+            \addlegendentry{$G24M2-500$}
+									\addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/DUprofileG24mf24.csv};
+            \addlegendentry{$G24M1-500$}
+						\addplot [
+            blue,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/DUprofileG24mf25.csv};
+            \addlegendentry{$G24F-500$}
+                        \draw [dashdotted,red, thick] (50-45.80,-8) -- (50-45.80,30);
+            \addplot [
+            black,dashed,thick,
+            ]
+            coordinates{
+            (80, 10)
+            (80, -5)
+            };
+
+
+        \end{axis}
+        \end{tikzpicture}

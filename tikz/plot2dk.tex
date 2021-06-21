@@ -1,0 +1,47 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            xlabel={ES},
+			ylabel={$d/k$},
+		%	ztick={5.5,6,6.5,7,7.5},
+            ymin=0.6,ymax=1.2,
+            width=.5\textwidth,
+            height=.4\textwidth,
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize},
+                        legend style={font=\tiny,anchor=south east},
+                        legend pos=south east,
+            ]
+
+                        \addplot [
+            black,mark=x,thick, mark size=3pt
+            ]
+            coordinates{
+            (0.39,38.02/50)
+			(0.44,40.02/50)
+			(0.54,40.62/50)
+			(0.57,40.87/50)
+			};
+			            \addlegendentry{$Sk=0.48$}
+			\addplot [
+            black!60,mark=x,thick, mark size=3pt
+            ]
+            coordinates{
+            (0.37,44.82/50)
+            (0.43,45.62/50)
+			(0.53,47.29/50)
+			(0.54,47.47/50)
+            };
+            			            \addlegendentry{$Sk=0$}
+             \addplot [
+            black!20,mark=x,thick, mark size=3pt
+            ]
+            coordinates{
+			(0.39,50.38/50)
+			(0.44,52.45/50)
+			(0.54,53.03/50)
+			(0.57,53.23/50)
+			};
+            			            \addlegendentry{$Sk=-0.48$}
+        \end{axis}
+        \end{tikzpicture}

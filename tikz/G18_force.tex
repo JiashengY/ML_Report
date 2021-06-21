@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+\pgfplotsset{
+    scale only axis,
+}
+\begin{axis}[
+		xlabel=$L_x$,
+		ylabel=$L_z$,
+		xmin=0,xmax=2.4,
+		ymin=0,ymax=0.8,
+		y dir=reverse,
+		unit vector ratio=1 1 1,
+		clip=true,
+		set layers,
+		clip mode=individual,
+		height=0.34\linewidth,
+		width=.83\linewidth,
+		xtick={0,0.4,...,2.4},
+		ytick={0,0.2,...,0.8},
+		label style={font=\footnotesize},
+		tick label style={font=\footnotesize},
+	]
+	\centering
+\addplot [thick, color=blue, on layer=axis background]
+graphics[xmin=0,ymin=0,xmax=2.4,ymax=0.8]{Figures/G18_force.png};
+
+\end{axis}
+\end{tikzpicture}

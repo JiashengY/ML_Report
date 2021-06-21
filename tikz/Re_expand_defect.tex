@@ -1,0 +1,80 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$U^+$},
+            xlabel={$(y-d)^+$},
+            %ymin=0, ymax=1,
+            ymax=30,
+			xmin=0,xmax=1,
+            width=.8\textwidth,
+            height=.7\textwidth,
+			%xmode=log,
+            %legend style={font=\tiny,at={(axis cs:9,-1)},anchor=south west},
+            legend style={fill=none,font=\tiny,at={(0,1)},anchor=north west},
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            %\addplot [
+            %black!25,dashed,thick,
+            %]
+            %table [x=X, y=Y,col sep=comma]{CSV/Reall1.csv};
+            %\addlegendentry{1}
+            %\addplot [
+            %black!100,dashed,thick,
+            %]
+            %table [x=X, y=Y,col sep=comma]{CSV/Reall2.csv};
+            %\addlegendentry{2}
+            %            \addplot [
+            %black!75,dashed,thick,
+            %5]
+            %table [x=X, y=Y,col sep=comma]{CSV/Reall3.csv};
+            %\addlegendentry{3}
+            %            \addplot [
+            %black!50,dashed,thick,
+            %]
+            %table [x=X, y=Y,col sep=comma]{CSV/Reall4.csv};
+            %\addlegendentry{4}
+                        \addplot [
+            black!100,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Defectm11.csv};
+            \addlegendentry{$Re_\tau=1000$}
+                        \addplot [
+            black!75,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Defectm12.csv};
+            \addlegendentry{$Re_\tau=750$}
+                        \addplot [
+            black!50,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Defectm13.csv};
+            \addlegendentry{$Re_\tau=500$}
+                        \addplot [
+            black!25,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Defectm14.csv};
+            \addlegendentry{$Re_\tau=250$}
+            
+                                   \addplot [
+            black!100,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Defectm21.csv};
+            \addlegendentry{$Re_\tau=1000$}
+                        \addplot [
+            black!75,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Defectm22.csv};
+            \addlegendentry{$Re_\tau=750$}
+                        \addplot [
+            black!50,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Defectm23.csv};
+            \addlegendentry{$Re_\tau=500$}
+                        \addplot [
+            black!25,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Defectm24.csv};
+            \addlegendentry{$Re_\tau=250$}
+                       
+        \end{axis}
+        \end{tikzpicture}

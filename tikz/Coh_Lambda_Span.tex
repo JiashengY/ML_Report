@@ -1,0 +1,96 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$\overline{\gamma_{kf}^2}$},
+            xlabel={$\lambda/H$},
+            ymin=0, ymax=.8,
+			xmin=0.01,xmax=2.4,
+            width=1\textwidth,
+            height=.9\textwidth,
+			xmode=log,
+            legend style={font=\tiny,anchor=south east},
+                        legend pos=south east,
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            % \fill[color=black!30,opacity=50] (0.8,0) -- (0.8,1) -- (2,1) -- (2,0) -- cycle;
+            %  \fill[color=black!60,opacity=90] (1.6,0) -- (1.6,1) -- (2,1) -- (2,0) -- cycle;
+                \addplot [
+            black,dashdotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_GSpan4.csv};
+            \addlegendentry{$G14M2-500$}
+			            \addplot [
+            black,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_GSpan3.csv};
+            \addlegendentry{$G24M2-500$}
+            			            \addplot [
+            black,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_GSpan2.csv};
+            \addlegendentry{$G18M1-500$}
+                        \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_GSpan1.csv};
+            \addlegendentry{$G28M1-500$}
+
+          %              			            \addplot [
+           % red,solid,thick,
+        %    ]
+        %    table [x=X, y=Y,col sep=comma]{CSV/Coh_G24M1Span1.csv};
+         %   \addlegendentry{G24M1}
+		%	            \addplot [
+         %   black!60,solid,thick,
+          %  ]
+           % table [x=X, y=Y,col sep=comma]{CSV/Coh_PSpan2.csv};
+        %    			            \addplot [
+        %    black!60,dashed,thick,
+        %    ]
+        %    table [x=X, y=Y,col sep=comma]{CSV/Coh_GSpan2.csv};
+	%		            \addplot [
+    %        black!60,dotted,thick,
+    %%        ]
+     %       table [x=X, y=Y,col sep=comma]{CSV/Coh_NSpan2.csv};
+%						            \addplot [
+ %           black!30,solid,thick,
+  %          ]
+   %         table [x=X, y=Y,col sep=comma]{CSV/Coh_PSpan3.csv};
+    %        			            \addplot [
+     %       black!30,dashed,thick,
+      %%     table [x=X, y=Y,col sep=comma]{CSV/Coh_GSpan3.csv};
+		%	            \addplot [
+         %   black!30,dotted,thick,
+          %  ]
+          %  table [x=X, y=Y,col sep=comma]{CSV/Coh_NSpan3.csv};
+	%					            \addplot [
+    %        black!10,solid,thick,
+    %        ]
+    %        table [x=X, y=Y,col sep=comma]{CSV/Coh_PSpan4.csv};
+    %        			            \addplot [
+    %        black!10,dashed,thick,
+    %        ]
+    %       table [x=X, y=Y,col sep=comma]{CSV/Coh_GSpan4.csv};
+%			            \addplot [
+%            black!10,dotted,thick,
+%            ]
+ %           table [x=X, y=Y,col sep=comma]{CSV/Coh_NSpan4.csv};			
+			
+			
+\draw [dashed,red] (0.08,0) -- (0.08,1);
+
+        \end{axis}
+                    \begin{axis}[
+            xlabel={$\lambda^+$},
+                        ymin=0, ymax=.8,
+                                    width=1\textwidth,
+            height=.9\textwidth,
+			xmin=5,xmax=1200,
+			axis y line*=right,
+			domain=5:1200,
+			xmode=log,
+yticklabels={,,},
+      axis x line*=top]
+    \end{axis}
+        \end{tikzpicture}

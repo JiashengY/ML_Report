@@ -1,0 +1,44 @@
+\begin{tikzpicture}
+\begin{axis}[
+		xlabel={$L_x$, [H]},
+		ylabel={$k$, [H]},
+		xmin=0,xmax=2.4,
+		ymin=0,ymax=0.12,
+		%y dir=reverse,
+		clip=true,
+		set layers,
+		clip mode=individual,
+	    height=0.3\linewidth,
+		width=.9\linewidth,
+		axis x line*=bottom,
+		axis y line*=left,
+		xtick={0,0.4,...,2.4},
+		ytick={0,0.04,...,0.12},
+		label style={font=\footnotesize},
+		yticklabel style={/pgf/number format/fixed},
+		tick label style={font=\footnotesize},
+		at={(0,0.35\linewidth)}
+	]
+	\centering
+    \addplot+[ name path=A,
+            red,solid,thick,mark=none
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G18H.csv};
+    \path[name path=B,black,mark=none] (axis cs:0,0) -- (axis cs:2.4,0);
+    \addplot[gray,mark=none] fill between[of=A and B];
+    							\addplot [
+            gray,thick,dashed,mark=square,
+            ]
+            coordinates{
+            (-0.5, 47.29/500)
+            (3, 47.29/500)
+            };
+                							\addplot [
+                        black,thick,solid,mark=square,
+            ]
+            coordinates{
+            (-0.5, 0.061)
+            (3, 0.061)
+            };
+\end{axis}
+\end{tikzpicture}

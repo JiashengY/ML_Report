@@ -1,0 +1,40 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$\Delta U_{G24M2-500}^+$},
+            xlabel={$\overline{\Delta U_{G24M2-500}^+}$},
+            ymin=5, ymax=8,
+			xmax=8,
+			xmin=5,
+			%xtick={-2,-1.5,...,-0.4},
+            width=1\linewidth,
+            height=.8\linewidth,
+            label style={font=\footnotesize},
+			legend style={font=\tiny,at={(0,1)},anchor=north west},
+            tick label style={font=\footnotesize}
+            ]
+						\addplot [
+            gray,only marks,mark=square,
+            ]
+            coordinates{
+            (6.42, 6.06)
+            (6.42, 6.43)
+            (6.42, 6.35)
+            (6.42, 6.49)
+            (6.42, 6.62)
+            (6.42, 6.67)
+            (6.42, 6.63)
+            (6.42, 6.16)
+            };
+			\addlegendentry{$G24M2-500s$}
+			 \fill[color=green!40,opacity=40] (0,0) -- (9,9.45) -- (9,8.55) -- cycle;
+						\addplot [
+            red,thick,solid,mark=square,
+            ]
+            coordinates{
+            (0, 0)
+            (9, 9)
+            };
+			\node[red,right] at (axis cs: 7.5,7.5) {\tiny $\pm5\%$};
+        \end{axis}
+        \end{tikzpicture}

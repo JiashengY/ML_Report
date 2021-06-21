@@ -1,0 +1,23 @@
+\begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={Possibility density},
+            xlabel={$\Delta U^+$},
+            %ymin=0, ymax=1,
+			%xmin=2,xmax=200,
+            width=.5\textwidth,
+            height=.5\textwidth,
+			%xmode=log,
+            %legend style={font=\tiny,at={(axis cs:9,-1)},anchor=south west},
+            %legend style={fill=none,font=\tiny,at={(0,1)},anchor=north west},
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/PDFG241.csv};
+            \draw[<->] (6.33,0) -- (6.73,0);
+            %\addlegendentry{Industrial pipe~\cite{Moody1944}}
+        \end{axis}
+        \end{tikzpicture}

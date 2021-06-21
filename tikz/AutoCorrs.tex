@@ -1,0 +1,58 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$\bar{R}_{ff}(\Delta_x)$},
+            xlabel={$\Delta_x/H$},
+            ymin=-0.07, ymax=1,
+			xmin=0,xmax=1,
+            width=.8\textwidth,
+            height=.5\textwidth,
+            legend style={fill=white,font=\tiny,anchor=north east},
+            label style={font=\footnotesize},
+            legend pos = north east,
+            tick label style={font=\footnotesize}
+            ]
+                                    \addplot [
+            black,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Auto_corrs2.csv};
+            \addlegendentry{$N24M2$}
+            \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Auto_corrs1.csv};
+            \addlegendentry{$G24M2$}
+            \addplot [
+            black,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Auto_corrs3.csv};
+            \addlegendentry{$P24M2$}
+
+                                    \addplot[
+            red,mark=*, only marks, mark size=2pt
+            ]
+            coordinates{
+            (0.4141,0.2962)			
+            (0.4453,0.1572)%P24
+            (0.4922,0.1741)
+			};
+			                                    \addplot[
+            red,mark=o, only marks, mark size=2pt
+            ]
+            coordinates{
+            (0.4922,0.2316)%N14
+            (0.375,0.1733)%N18
+            (0.4031,0.1233)%N28
+            (0.3047,0.1215)%G14
+            (0.3563,0.1254)%G18
+            (0.6,0.1346)%G28
+            (0.4375,0.1909)%P14
+            (0.3496,0.1414)%P18
+            (0.4781,0.109)%P28
+			};
+			
+			
+			
+			
+        \end{axis}
+        \end{tikzpicture}

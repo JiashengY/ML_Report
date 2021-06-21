@@ -1,0 +1,47 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+        view={45}{45},
+            ylabel={ES},
+            xlabel={$Sk$},
+			zlabel={$\Delta U^+$},
+			ztick={5.5,6,6.5,7,7.5},
+            %ymin=0, ymax=1,
+            width=.6\textwidth,
+            height=.4\textwidth,
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+
+                        \addplot3 [
+            black,mark=x,thick, mark size=3pt
+            ]
+            coordinates{
+			(0.48,0.39,6.8720)
+			(0.48,0.44,6.9176)
+			(0.48,0.54,7.3415)
+			(0.48,0.57,7.3502)
+			};
+			\addplot3 [
+            black,mark=x,thick, mark size=3pt
+            ]
+            coordinates{
+            (0,0.37,5.8764)
+            (0,0.43,6.20)
+            (0,0.53,6.5891)
+            (0,0.54,6.56)
+            };
+            
+            
+            
+                                   \addplot3 [
+            black,mark=x,thick, mark size=3pt
+            ]
+            coordinates{
+			(-0.48,0.57,5.87)
+			(-0.48,0.54,6.0625)
+			(-0.48,0.44,5.8034)
+			(-0.48,0.39,5.5765)
+			};
+        \end{axis}
+        \end{tikzpicture}

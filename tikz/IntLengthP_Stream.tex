@@ -1,0 +1,56 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            %xlabel={$p$},
+			ylabel={$L_{k,x}/H$, $L_{f,x}/H$},
+			ytick={0,0.04,0.08},
+			ymin=0,ymax=0.08,
+			xmin=-2.3,xmax=-0.7,
+            %ymin=0, ymax=0.16,
+            width=1\textwidth,
+            xticklabels={,,},
+            height=.9\textwidth,
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            
+            
+            
+			                                    \addplot [
+            black,mark=o,thick, mark size=3pt
+            ]
+            coordinates{		
+			(-2,0.0153)
+			(-1,0.0121)%p
+			};
+			
+
+						\addplot [
+            gray!60,mark=o,thick, mark size=3pt
+            ]
+            coordinates{
+			(-2,0.0180)
+			(-1,0.0119)
+            };
+
+			                                    \addplot [
+            black,mark=square,thick, mark size=3pt
+            ]
+            coordinates{		
+			(-2,0.0483)
+			(-1,0.0328)
+			};
+
+			
+						\addplot [
+            gray!60,mark=square,thick, mark size=3pt
+            ]
+            coordinates{
+            
+			(-2,0.0724)
+			(-1,0.0346)
+            };
+		\node[] at (-1.2,0.07) {$Sk=0.48$};
+            
+        \end{axis}
+        \end{tikzpicture}

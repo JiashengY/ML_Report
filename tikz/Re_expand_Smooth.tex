@@ -1,0 +1,85 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$U^+$},
+            xlabel={$y^+$},
+            %ymin=0, ymax=1,
+            ymax=30,
+			xmin=1,xmax=1000,
+            width=.5\textwidth,
+            height=.5\textwidth,
+			xmode=log,
+            %legend style={font=\tiny,at={(axis cs:9,-1)},anchor=south west},
+            legend style={fill=none,font=\tiny,at={(0,1)},anchor=north west},
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            %\addplot [
+            %black!25,dashed,thick,
+            %]
+            %table [x=X, y=Y,col sep=comma]{CSV/Reall1.csv};
+            %\addlegendentry{1}
+            %\addplot [
+            %black!100,dashed,thick,
+            %]
+            %table [x=X, y=Y,col sep=comma]{CSV/Reall2.csv};
+            %\addlegendentry{2}
+            %            \addplot [
+            %black!75,dashed,thick,
+            %5]
+            %table [x=X, y=Y,col sep=comma]{CSV/Reall3.csv};
+            %\addlegendentry{3}
+            %            \addplot [
+            %black!50,dashed,thick,
+            %]
+            %table [x=X, y=Y,col sep=comma]{CSV/Reall4.csv};
+            %\addlegendentry{4}
+                        \addplot [
+            black!100,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Uprofilesmooth1.csv};
+            
+                                    \addplot [
+            black!100,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Uprofilesmooth2.csv};
+            
+            
+                        \addplot [
+     black!100,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Uprofilesmooth3.csv};
+                        \addplot [
+  black!100,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Uprofilesmooth4.csv};
+
+                        \addplot [
+      black!100,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Uprofilesmooth5.csv};
+
+                        \addplot [
+        black!100,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall9.csv};
+
+                        \addplot [
+      black!100,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Uprofilesmooth6.csv};
+                        \addplot [
+ black!100,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Uprofilesmooth7.csv};
+                        \addplot [
+ black!100,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Uprofilesmooth8.csv};
+                        \addplot [
+  black!100,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Uprofilesmooth9.csv};
+            
+        \end{axis}
+        \end{tikzpicture}

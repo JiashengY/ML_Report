@@ -1,0 +1,28 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={Cross-Correlation $R_{fk}$},
+            xlabel={Lag},
+            %ymin=0, ymax=1,
+			%xmin=0,%xmax=500,
+            width=.5\textwidth,
+            height=.4\textwidth,
+			%xmode=log,
+            legend style={fill=none,font=\tiny,at={(0,1)},anchor=north west},
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/CrossCorx1.csv};
+            \addlegendentry{$R_{fk,x}$}
+						\addplot [
+            black,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/CrossCorz1.csv};
+            \addlegendentry{$R_{fk,z}$}
+
+
+        \end{axis}
+        \end{tikzpicture}

@@ -1,0 +1,141 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$\frac{-f_x}{f_{x,\text{rms}}}$, $\frac{k}{k_{\text{rms}}}$},
+            %xlabel={$x$, [H]},
+            ymin=-5, ymax=9,
+			xmin=0,xmax=2,
+            width=.8\textwidth,
+            height=.3\textwidth,
+            %legend style={fill=white,font=\tiny,anchor=south east},
+            label style={font=\footnotesize},
+            legend pos = south east,
+            tick label style={font=\footnotesize}
+            ]
+            \addplot [
+            red,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/forcedist1.csv};
+            %\addlegendentry{roughness height $k$}
+						\addplot [
+            blue,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/forcedist2.csv};
+            %\addlegendentry{force $f_x$}
+                        \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter1.csv};
+                                    \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter2.csv};
+                                    \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter3.csv};
+                                    \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter4.csv};
+                                    \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter5.csv};
+                                    \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter6.csv};
+                                    \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter7.csv};
+                                                \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter8.csv};
+                                                \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter9.csv};
+                                                \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter10.csv};
+                                                            \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter11.csv};
+                                                            \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter12.csv};
+                                                            \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter13.csv};
+                                                            \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter14.csv};
+                                    \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface1.csv};
+                                                \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface2.csv};
+                                                \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface3.csv};
+                                                \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface4.csv};
+                                                \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface5.csv};
+                                                \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface6.csv};
+                                                \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface7.csv};
+                                                            \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface8.csv};
+                                                            \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface9.csv};
+                                                            \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface10.csv};
+            \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface11.csv};
+            \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface12.csv};
+            \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface13.csv};
+            \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24Shelter_surface14.csv};
+\draw[->] (0.2,6) -- (0.4,6);
+\node[] at (0.3,6.8) {Flow};
+\node[] at (0.2,-2) {(b) $G24M2$};
+        \end{axis}
+        \end{tikzpicture}

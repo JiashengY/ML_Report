@@ -1,0 +1,27 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={Posibility density},
+            xlabel={Height},
+            ymin=0, ymax=0.05,
+			%xmin=1,xmax=500,
+            width=1\textwidth,
+            height=1\textwidth,
+			%xmode=log,
+            %legend style={font=\tiny,at={(axis cs:9,-1)},anchor=south west},
+            legend style={font=\tiny,at={(0,1)},anchor=north west,fill=none},
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/BimodalPDF1.csv};
+            \addlegendentry{Double-peak $Sk=-0.58$}
+            \addplot [
+            black,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/P76PDF1.csv};
+            \addlegendentry{Single-peak $Sk=0.76$}
+        \end{axis}
+        \end{tikzpicture}

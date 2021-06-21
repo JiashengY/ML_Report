@@ -1,0 +1,100 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$U^+$},
+            xlabel={$(y-d)^+$},
+            %ymin=0, ymax=1,
+            ymax=30,
+			xmin=1,xmax=1000,
+            width=1.05\textwidth,
+            height=1\textwidth,
+			xmode=log,
+            %legend style={font=\tiny,at={(axis cs:9,-1)},anchor=south west},
+            legend style={fill=white,font=\tiny,anchor=north west},
+            label style={font=\footnotesize},
+            legend pos=north west,
+            tick label style={font=\footnotesize}
+            ]
+            %\addplot [
+            %black!25,dashed,thick,
+            %]
+            %table [x=X, y=Y,col sep=comma]{CSV/Reall1.csv};
+            %\addlegendentry{1}
+            %\addplot [
+            %black!100,dashed,thick,
+            %]
+            %table [x=X, y=Y,col sep=comma]{CSV/Reall2.csv};
+            %\addlegendentry{2}
+            %            \addplot [
+            %black!75,dashed,thick,
+            %5]
+            %table [x=X, y=Y,col sep=comma]{CSV/Reall3.csv};
+            %\addlegendentry{3}
+            %            \addplot [
+            %black!50,dashed,thick,
+            %]
+            %table [x=X, y=Y,col sep=comma]{CSV/Reall4.csv};
+            %\addlegendentry{4}
+                        \addplot [
+            black!100,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall5.csv};
+            \addlegendentry{$Re_\tau=1000$, $k^+=100$}
+                        \addplot [
+            black!75,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall6.csv};
+            \addlegendentry{$Re_\tau=750$, $k^+=75$}
+                        \addplot [
+            black!50,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall7.csv};
+            \addlegendentry{$Re_\tau=500$, $k^+=50$}
+                        \addplot [
+            black!25,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall18.csv};
+            \addlegendentry{$Re_\tau=250$, $k^+=25$}
+                        \addplot [
+            black,densely dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall9.csv};
+            \addlegendentry{$U^+=(\frac{1}{0.4})\text{log}(y^+)+5.2$}
+                        \addplot [
+            black!100,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall10.csv};
+                        \addplot [
+            black!75,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall11.csv};
+                        \addplot [
+            black!50,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall12.csv};
+                        \addplot [
+            black!25,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall13.csv};
+                        \addplot [
+            black!100,dotted,thick
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall15.csv};
+                        \addplot [
+            black!75,dotted,thick
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall16.csv};
+                        \addplot [
+            black!50,dotted,thick
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall17.csv};
+                        \addplot [
+            black!25,dotted,thick
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Reall8.csv};
+%            \draw [solid,red] (25-23.1,2.9) -- (25-23.1,3.9);
+%            \draw [solid,red] (50-45.8,2) -- (50-45.8,3);
+%             \draw [solid,red] (75-65.7,2) -- (75-65.7,2.9);
+%             \draw [solid,red] (100-86.4,1.7) -- (100-86.4,2.7);
+        \end{axis}
+        \end{tikzpicture}

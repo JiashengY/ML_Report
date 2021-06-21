@@ -1,0 +1,87 @@
+\begin{tikzpicture}
+\begin{axis}[view={30}{20},
+		xlabel=$Sk$,
+		ylabel=$p$,
+		zlabel=$\Delta U^+$,
+		zmin=5,
+		%colormap/parula,
+		mesh/cols=100,
+		height=.8\linewidth,
+		width=1\linewidth,
+		%colorbar,
+		]
+					\addplot3 [
+            black,only marks,mark=+,
+            ]
+            coordinates{
+            (0,-0.75,5)
+            (0.76,-1.5,5)
+            (0.76,-2,5)
+            (-0.58,-1.5,5)
+            };
+            					\addplot3 [
+            red,only marks,mark=+,
+            ]
+            coordinates{
+            (0,-1.5,5)
+            };
+		\fill[color=red!60,opacity=100] (-0.48,-2,5) -- (-0.48,-1,5) -- (0.48,-1,5) -- (0.48,-2,5) -- cycle;
+		  \addplot3 [surf,shader=interp,opacity=0.4]
+  table[x=Sk, y=PSslope, z=Down, col sep=comma] {CSV/GPRpredict.csv};
+  \addplot3 [
+            black!30,dashed,no marks
+            ]
+            coordinates{
+            (0,-0.75,5)
+            (0,-0.75,6.80)
+            };
+              \addplot3 [
+            red!30,dashed,no marks
+            ]
+            coordinates{
+            (0,-1.5,5)
+            (0,-1.5,6.65)
+            };
+              \addplot3 [
+            black!30,dashed,no marks
+            ]
+            coordinates{
+            (0.76,-1.5,5)
+            (0.76,-1.5,7.36)
+            };
+                          \addplot3 [
+            black!30,dashed,no marks
+            ]
+            coordinates{
+            (0.76,-2,5)
+            (0.76,-2,7.35)
+            };
+                          \addplot3 [
+            black!30,dashed,no marks
+            ]
+            coordinates{
+            (-0.58,-1.5,5)
+            (-0.58,-1.5,6.05)
+            };
+\addplot3 [surf,shader=interp,color=blue]
+  table[x=Sk, y=PSslope, z=Y, col sep=comma] {CSV/GPRpredict.csv};
+    \addplot3 [surf,shader=interp,opacity=0.4]
+  table[x=Sk, y=PSslope, z=UP, col sep=comma] {CSV/GPRpredict.csv};
+			\addplot3 [
+            black,only marks,mark=o,
+            ]
+            coordinates{
+            (0,-0.75,6.80)
+            (0.76,-1.5,7.36)
+            (0.76,-2,7.35)
+            (-0.58,-1.5,6.05)
+            };
+            			\addplot3 [
+                        red,only marks,mark=o,
+            ]
+            coordinates{
+            (0,-1.5,6.65)
+            };
+
+\end{axis}
+\end{tikzpicture}

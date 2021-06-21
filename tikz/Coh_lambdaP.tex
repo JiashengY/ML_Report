@@ -1,0 +1,76 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$\gamma_{kf}^2, [-]$},
+            xlabel={$\lambda^+$},
+            ymin=0, ymax=.8,
+			xmin=0.01*500,xmax=2.4*500,
+            width=1\textwidth,
+            height=1\textwidth,
+			xmode=log,
+            legend style={fill=none,font=\tiny,at={(0,1)},anchor=north west},
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            % \fill[color=black!30,opacity=50] (0.8,0) -- (0.8,1) -- (2,1) -- (2,0) -- cycle;
+            %  \fill[color=black!60,opacity=90] (1.6,0) -- (1.6,1) -- (2,1) -- (2,0) -- cycle;
+            \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Pp1.csv};
+            \addlegendentry{Positive Skewness}
+            			            \addplot [
+            black,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Gp1.csv};
+            \addlegendentry{Gaussian}
+			            \addplot [
+            black,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Np1.csv};
+            \addlegendentry{Negative Skewness}
+			            \addplot [
+            black!60,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Pp2.csv};
+            			            \addplot [
+            black!60,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Gp2.csv};
+			            \addplot [
+            black!60,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Np2.csv};
+						            \addplot [
+            black!30,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Pp3.csv};
+            			            \addplot [
+            black!30,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Gp3.csv};
+			            \addplot [
+            black!30,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Np3.csv};
+						            \addplot [
+            black!10,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Pp4.csv};
+            			            \addplot [
+            black!10,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Gp4.csv};
+			            \addplot [
+            black!10,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_Np4.csv};			
+			
+			
+\draw [dashed,red] (0.08*500,0) -- (0.08*500,1);
+\draw [dashed,red] (0.6*500,0) -- (0.6*500,1);
+
+
+
+        \end{axis}
+        \end{tikzpicture}

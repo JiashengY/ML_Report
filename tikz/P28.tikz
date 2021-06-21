@@ -1,0 +1,68 @@
+\begin{tikzpicture}
+\pgfplotsset{
+    scale only axis,
+}
+\begin{axis}[
+		xlabel={$x/H$},
+		ylabel={$z/H$},
+		ylabel shift = 3.5 pt,
+		xmin=0,xmax=2.4,
+		ymin=0,ymax=0.8,
+		unit vector ratio=1 1 1,
+		y dir=reverse,
+		clip=true,
+		set layers,
+		clip mode=individual,
+		width=.75\linewidth,
+		xtick={0,0.6,...,2.4},
+		ytick={0,0.4,...,0.8},
+		label style={font=\footnotesize},
+		tick label style={font=\footnotesize},
+				colorbar,
+		point meta min=0.0,
+		point meta max=0.1227,
+				colorbar horizontal,
+		colorbar style={
+				xlabel={$k/H$},
+				%xlabel shift = 5.5 pt,
+		xtick={0,0.12},
+		height=0.2cm,
+    colorbar style={
+    at={(0,-0.2)},anchor=north west}
+		}
+	]
+	\centering
+\addplot [thick, color=blue, on layer=axis background]
+graphics[xmin=0,ymin=0,xmax=2.4,ymax=0.8]{Figures/P28c.png};
+    \draw[red,dashed,thick] (0,0.4) -- (2.4,0.4);
+    \node[black,right] at (axis cs: 0,0.65) {\contour{black}{(l) $P28$}};
+\end{axis}
+\begin{axis}[
+		%xlabel=$L_x [H]$,
+		ylabel={$k/H$},
+		xmin=0,xmax=2.4,
+		ymin=0,ymax=0.12,
+		%y dir=reverse,
+		clip=true,
+		set layers,
+		clip mode=individual,
+	    height=0.05\linewidth,
+		width=.75\linewidth,
+		axis x line*=bottom,
+		axis y line*=left,
+		xticklabels=\empty,
+		ytick={0.12},
+		label style={font=\footnotesize},
+		yticklabel style={/pgf/number format/fixed},
+		tick label style={font=\footnotesize},
+		at={(0,0.28\linewidth)}
+	]
+	\centering
+    \addplot+[ name path=A,
+            red,solid,thick,mark=none
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/P28H.csv};
+    \path[name path=B,black,mark=none] (axis cs:0,0) -- (axis cs:2.4,0);
+    \addplot[gray,mark=none] fill between[of=A and B];
+\end{axis}
+\end{tikzpicture}

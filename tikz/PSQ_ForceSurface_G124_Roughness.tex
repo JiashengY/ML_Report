@@ -1,0 +1,38 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$qE_k(q)/\int E_k(q)\mathrm{d}q$},
+            xlabel={$q/q_{ref}$},
+           ymin=0, ymax=0.01,
+			%xmin=1,xmax=500,
+            width=0.9\textwidth,
+            height=0.9\textwidth,
+			xmode=log,
+            legend style={font=\tiny,anchor=north west},
+            legend pos= north west,
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+						\addplot [
+            red,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/premultiplyPSG241.csv};
+                        \addlegendentry{G24M2}
+            \addplot [
+            blue,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/premultiplyPSG142.csv};
+            \addlegendentry{G14M2}
+            \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/premultiplyPSG282.csv};
+            \addlegendentry{G28M1}
+            \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/premultiplyPSG182.csv};
+            \addlegendentry{G18M1}
+
+        \end{axis}
+        \end{tikzpicture}

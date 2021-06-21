@@ -1,0 +1,60 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+		yticklabels={,,},
+				xticklabels={,,},
+			ymin=0,ymax=0.08,
+			xmin=-2.3,xmax=-0.7,
+            %ymin=0, ymax=0.16,
+            width=1\textwidth,
+            height=.9\textwidth,
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            
+            
+            
+                                    \addplot [
+            black,mark=o,thick, mark size=3pt
+            ]
+            coordinates{
+            (-2,0.0136)			
+			(-1,0.0125)%0
+			};
+			
+			
+			
+			\addplot[
+            gray!60,mark=o,thick, mark size=3pt
+            ]
+            coordinates{
+            (-2,0.0175)
+			(-1,0.0144)
+            };
+
+            
+            
+        
+            
+                                    \addplot [
+            black,mark=square,thick, mark size=3pt
+            ]
+            coordinates{
+            (-2,0.0485)			
+			(-1,0.0328)
+
+			};
+
+			\addplot [
+            gray!60,mark=square,thick, mark size=3pt
+            ]
+            coordinates{
+            
+            (-2,0.0724)
+			(-1,0.0346)
+            };
+		\node[] at (-1.2,0.07) {$Sk=0$};
+		
+            
+        \end{axis}
+        \end{tikzpicture}

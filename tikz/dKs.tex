@@ -1,0 +1,75 @@
+\begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$d/k_{t,5\times5}$},
+            xlabel={$k_{md}/k$},
+            ymin=0.2, 
+            ymax=1,
+			xmax=1,
+			xmin=0.2,
+			%xtick={-2,-1.5,...,-0.4},
+            width=.8\linewidth,
+            height=.6\linewidth,
+            label style={font=\footnotesize},
+			legend style={font=\tiny,at={(1,0)},anchor=south east},
+			xticklabel style={/pgf/number format/fixed},
+			yticklabel style={/pgf/number format/fixed},
+            tick label style={font=\footnotesize}
+            ]
+			\addplot [
+            black,mark=o,
+            ]
+            coordinates{
+            (0.46,0.6812)
+            (0.61,0.79)
+            (0.74,0.8872)
+            };
+        			\addlegendentry{$p=-1$, $\lambda_0=0.8H$}
+        			\addplot [
+            black,mark=square,
+            ]
+            coordinates{
+            (0.46,0.667)
+            (0.61,0.7603)
+            (0.74,0.8742)
+            };
+                			\addlegendentry{$p=-2$, $\lambda_0=0.8H$}
+        			\addplot [
+            black,mark=x,
+            ]
+            coordinates{
+            (0.46,0.677)
+            (0.61,0.7882)
+            (0.74,0.8838)
+            };
+                    			\addlegendentry{$p=-1$, $\lambda_0=1.6H$}
+                    			\addplot [
+            black,mark=triangle,
+            ]
+            coordinates{
+            (0.46,0.6337)
+            (0.61,0.747)
+            (0.74,0.8397)
+            };
+                    			\addlegendentry{$p=-2$, $\lambda_0=1.6H$}
+                    			\addplot [
+            gray,dashed,no marks,
+            ]
+            coordinates{
+            (0,0)
+            (0,0)
+            };
+            
+            \draw[scale=1, domain=0.3:1, smooth, variable=\x, dashed, gray] plot ({\x}, {0.4339*ln(\x)+0.9967});
+            \addlegendentry{$\frac{d}{k_{t,5\times5}}=0.4339\text{ln}(\frac{k_{md}}{k})+0.9967$} 
+ %                               			\addplot [
+ %           black,mark=*,
+ %           ]
+ %           coordinates{
+ %           (0.061*250,20.2127)
+ %           (0.061*500,45.62)
+ %           (0.061*750,57.8701)
+ %           (0.061*1000,77.0124)
+ %           };
+        \end{axis}
+        \end{tikzpicture}

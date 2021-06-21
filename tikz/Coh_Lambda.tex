@@ -1,0 +1,76 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$\overline{\gamma_{kf}^2}$},
+            xlabel={$\lambda/H$},
+            ymin=0, ymax=.8,
+			xmin=0.01,xmax=2.4,
+            width=1\textwidth,
+            height=.9\textwidth,
+			xmode=log,
+			  axis y line*=left,
+      axis x line*=bottom,
+            legend style={font=\tiny,anchor=north west},
+                        legend pos=north west,
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            % \fill[color=black!30,opacity=50] (0.8,0) -- (0.8,1) -- (2,1) -- (2,0) -- cycle;
+            %  \fill[color=black!60,opacity=90] (1.6,0) -- (1.6,1) -- (2,1) -- (2,0) -- cycle;
+     \node[label={[rotate=-90]{\color{red}\tiny$\Delta_x=0.3-0.6H$}}] at (axis cs:0.6,0.2) {};
+	 \fill[color=red!20,opacity=20] (0.3,0.9) -- (0.6,0.9) -- (0.6,-0.1) -- (0.3,-0.1) -- cycle;
+	                                     			            \addplot [
+            black,dashdotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_G4.csv};
+            \addlegendentry{$G14M2-500$}
+			            \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_G3.csv};
+            \addlegendentry{$G24M2-500$}
+	             			            \addplot [
+            black,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_G2.csv};
+            \addlegendentry{$G18M1-500$}
+                                    \addplot [
+            black,dotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/Coh_G1.csv};
+            \addlegendentry{$G28M1-500$}
+
+			
+			
+\draw [dashed,red] (0.08,0) -- (0.08,1);
+\draw[->] (0.7,0.6) -- (1.5,0.6);
+\node[] at (1.03,0.65) {{\tiny Wavy scales}};
+
+			            \addplot[
+            red,mark=o, only marks, mark size=1pt
+            ]
+            coordinates{
+            (0.4062,0.562)%G24
+			};                         \addplot[
+            red,mark=o, only marks, mark size=1pt
+            ]
+            coordinates{
+            (0.3047,0.52)%G14
+            (0.3563,0.54)%18
+            (0.6,0.557)%28
+			};
+        \end{axis}
+            \begin{axis}[
+            xlabel={$\lambda^+$},
+                        ymin=0, ymax=.8,
+                                    width=1\textwidth,
+            height=.9\textwidth,
+			xmin=5,xmax=1200,
+			axis y line*=right,
+			domain=5:1200,
+			xmode=log,
+yticklabels={,,},
+      axis x line*=top]
+    \end{axis}
+    
+        \end{tikzpicture}

@@ -1,0 +1,102 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$\frac{-f_x}{f_{x,\text{rms}}}$, $\frac{k}{k_{\text{rms}}}$},
+           % xlabel={$x$, [H]},
+            ymin=-5, ymax=9,
+			xmin=0,xmax=2,
+            width=.8\textwidth,
+            height=.3\textwidth,
+            %legend style={fill=white,font=\tiny,anchor=south east},
+            label style={font=\footnotesize},
+            legend pos = south east,
+            tick label style={font=\footnotesize}
+            ]
+            \addplot [
+            red,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/forcedistN1.csv};
+            %\addlegendentry{roughness height $k$}
+						\addplot [
+            blue,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/forcedistN2.csv};
+            \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter1.csv};
+                                    \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter2.csv};
+                                    \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter3.csv};
+                                    \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter4.csv};
+                                    \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter5.csv};
+                                    \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter6.csv};
+                                    \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter7.csv};
+                                                \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter8.csv};
+                                   \addplot [
+            gray,dashed,thin,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter9.csv};              
+                                    \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter_surface1.csv};
+                                                \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter_surface2.csv};
+                                                \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter_surface3.csv};
+                                                \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter_surface4.csv};
+                                                \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter_surface5.csv};
+                                                \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter_surface6.csv};
+                                                \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter_surface7.csv};
+                                                            \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter_surface8.csv};
+                         \addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/N24Shelter_surface9.csv};                                  
+            
+            %\addlegendentry{force $f_x$}
+\draw[->] (0.2,6) -- (0.4,6);
+\node[] at (0.3,6.8) {Flow};
+\node[] at (0.2,-2) {(a) $N24M2$};
+        \end{axis}
+        \end{tikzpicture}

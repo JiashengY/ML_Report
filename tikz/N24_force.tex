@@ -1,0 +1,45 @@
+\begin{tikzpicture}
+\pgfplotsset{
+    scale only axis,
+     colormap={RWB}{
+rgb255=(0,0,255)
+rgb255=(255,255,225)
+rgb255=(255,0,0)
+        }
+}
+\begin{axis}[
+        title style={yshift=-2ex,},
+        title={(l) $N24$},
+		xlabel=$x/H$,
+		xmin=0,xmax=2.0,
+		ymin=0,ymax=0.4,
+		y dir=reverse,
+		unit vector ratio=1 1 1,
+		clip=true,
+		set layers,
+		clip mode=individual,
+		width=.75\linewidth,
+		xtick={0,0.4,...,2.0},
+		ytick={0,0.2,...,0.4},
+		label style={font=\footnotesize},
+		tick label style={font=\footnotesize},
+								colorbar,
+								yticklabels={,,},
+		point meta min=-5,
+		point meta max=5,
+						colorbar horizontal,
+		colorbar style={
+				xlabel={$f_x/f_{x,\text{rms}}$},
+				%xlabel shift = 5.5 pt,
+		xtick={-5,0,5},
+		height=0.2cm,
+    colorbar style={
+    at={(0,-0.2)},anchor=north west}
+		}
+	]
+	\centering
+\addplot [thick, color=blue, on layer=axis background]
+graphics[xmin=0,ymin=0,xmax=2.0,ymax=0.4]{Figures/N24M2_force.png};
+\draw[|-|,red,thick] (0,0) -- (0+0.5,0);
+\end{axis}
+\end{tikzpicture}

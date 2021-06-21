@@ -1,0 +1,106 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$\Delta U_{\text{Eqn}}^+/\Delta U_{\text{DNS}}^+$},
+            xlabel={$\Delta U_{\text{DNS}}^+$},
+            ymin=0, ymax=2,
+			xmax=8,
+			xmin=5,
+			%xtick={-2,-1.5,...,-0.4},
+            width=.6\textwidth,
+            height=.5\textwidth,
+            label style={font=\footnotesize},
+            legend style={font=\tiny,anchor=south east},
+                        legend pos=south east,
+            tick label style={font=\footnotesize}
+            ]
+            \fill[color=green!20,opacity=20] (0,1.09) -- (10,1.09) -- (10,0.87) -- (0,0.87) -- cycle;
+            \fill[color=green!50,opacity=50] (0,1.07) -- (10,1.07) -- (10,0.92) -- (0,0.92) -- cycle;
+            \fill[color=green!100,opacity=100] (0,1.03) -- (10,1.03) -- (10,0.96) -- (0,0.96) -- cycle;
+
+			\addplot [
+            black,only marks,mark=triangle,
+            ]
+            coordinates{
+            (6.14,6.0601/6.14)
+            (6.09,5.9995/6.09)
+            (5.82,5.7702/5.82)
+            (5.51,5.6351/5.51)
+            };
+			\addlegendentry{Eqn.~\ref{Chan1}}
+						\addplot [
+            black,only marks,mark=star,
+            ]
+            coordinates{
+            (7.33,6.09/7.33)
+            (7.23,6.04/7.23)
+            (6.99,5.51/6.99)
+            (6.57,5.19/6.57)
+            (6.67,5.89/6.67)
+            (6.56,5.82/6.56)
+            (6.30,5.27/6.30)
+            (5.94,4.92/5.94)
+            (6.14,5.94/6.14)
+            (6.09,5.89/6.09)
+            (5.82,5.32/5.82)
+            (5.51,4.98/5.51)
+            };
+%\addlegendentry{Eqn.~\ref{thakkar}, $\alpha_T=1.2702$, $\beta_T=8.5619$}
+		%	\addlegendentry{Eqn.~\ref{thakkar}}
+%												\addplot [
+%            red,only marks,mark=star,
+%            ]
+%            coordinates{
+%            (7.33,6.87/7.33)
+%            (7.23,6.38/7.23)
+%            (6.99,6.83/6.99)
+%            (6.57,6.10/6.57)
+%            (6.67,6.70/6.67)
+%            (6.56,6.17/6.56)
+%            (6.30,6.64/6.30)
+%            (5.94,5.87/5.94)
+%            (6.14,6.75/6.14)
+%%            (6.09,6.21/6.09)
+ %           (5.82,6.70/5.82)
+ %           (5.51,5.92/5.51)
+ %           };
+						\addlegendentry{Eqn.~\ref{thakkar}}
+			
+			
+			
+			
+						\addplot [
+            red,only marks,mark=triangle,
+            ]
+            coordinates{
+            (6.67,5.8517/6.67)
+            (6.56,5.8307/6.56)
+            (6.30,5.5966/6.30)
+            (5.94,5.4282/5.94)
+            
+            (7.33,6.0601/7.33)
+            (7.23,5.9995/7.23)
+            (6.99,5.7702/6.99)
+            (6.57,5.6351/6.957)
+            
+            };
+			
+
+			
+							\addplot [
+            gray,thick,dashed,mark=square,
+            ]
+            coordinates{
+            (6, 2.5)
+            (6, -1)
+            };
+									\node[black,right] at (axis cs: 6,1.75) {\tiny Fully rough regime};
+							\addplot [
+            red,thick,mark=square,
+            ]
+            coordinates{
+            (4, 1)
+            (9, 1)
+            };									           
+        \end{axis}
+        \end{tikzpicture}

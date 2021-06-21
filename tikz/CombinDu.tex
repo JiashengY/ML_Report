@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+\node (overview) at (-10,5) {\input{tikz/plot3forl.tikz}};
+\node (caption_overview) [right=of overview,align=left] {(a) Overview of results.\\Black: $\lambda_0=0.8H$, gray: $\lambda_0=1.6H$};
+\node (Sk) at (-15,0) {\input{tikz/SkM.tikz}};
+\node (caption_sk) [below=of Sk,align=left] {(b) $\Delta U^+$ as a function of $Sk$.\\Black: $\lambda_0=0.8H$, gray: $\lambda_0=1.6H$};
+\node (p) at (-5,0) {\input{tikz/p.tikz}};
+\node (caption_p) [below=of p,align=left] {(c) $\Delta U^+$ as a function of $p$.\\Black: $\lambda_0=0.8H$, gray: $\lambda_0=1.6H$};
+\node (lambda) at (-10.5,-6.5) {\input{tikz/lambda.tikz}};
+\node (caption_lambda) [below=of lambda,align=left] {(d) $\Delta U^+$ as a function of $\lambda_0$.\\Black: $p=-1$, gray: $p=-2$};
+
+
+
+
+
+%\node (good) [right=of bad] {\includegraphics[width=4cm]{example-image-b}};
+
+\node (OL)  at (-12,4) {};
+\node (OR)  at (-8,4) {};
+\node (OB)  at (-10,3) {};
+\node (Sk)  at (-15,2) {};
+\node (p)  at (-5,2) {};
+\node (lambda)  at (-10,-4.5) {};
+\draw [ultra thick,black,->] (OL) to[bend right] (Sk);
+\draw [ultra thick,black,->] (OR) to[bend left] (p);
+\draw [ultra thick,black,->] (OB) to (lambda);
+%\draw [ultra thick,magenta,->] (a) to[bend left] (b);
+\end{tikzpicture}

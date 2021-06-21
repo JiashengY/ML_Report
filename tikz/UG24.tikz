@@ -1,0 +1,66 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$U^+$},
+            xlabel={$(y-d)^+$},
+            ymin=0, ymax=30,
+			xmin=1,xmax=500,
+            width=1.05\textwidth,
+            height=0.8\textwidth,
+			xmode=log,
+            legend style={fill=white,font=\tiny,anchor=north west},
+            legend pos=north west,
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            \addplot [
+            black,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/UprofileG24FM1.csv};
+            \addlegendentry{critical height $y_c$}
+            			            \addplot [
+            gray!50,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/G24M31.csv};
+            \addlegendentry{$G24M3-500$}
+			            \addplot [
+            red,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/UprofileG24FM6.csv};
+            \addlegendentry{$G24M2-500$}
+			\addplot [
+            green,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/UprofileG24FM7.csv};
+            \addlegendentry{$G24M1-500$}
+						\addplot [
+            blue,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/UprofileG24FM8.csv};
+            \addlegendentry{$G24F-500$}
+						\addplot [
+            black,dashdotted,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/UprofileG24FM9.csv};
+            \addlegendentry{$U^+=(\frac{1}{0.4})\text{log}(y^+)+5.2$}
+            \draw [dashdotted,red, thick] (50-45.80,0) -- (50-45.80,30);
+            \addplot [
+            black,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/UprofileG24FM2.csv};
+            \addplot [
+            blue,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/UprofileG24FM3.csv};
+            \addplot [
+            green,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/UprofileG24FM4.csv};	            
+\addplot [
+            red,dashed,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/UprofileG24FM5.csv};
+\draw [dashed,gray!50] (60,0) -- (60,30);
+
+        \end{axis}
+        \end{tikzpicture}

@@ -1,0 +1,52 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$\Delta U^+$},
+            xlabel={Skewness $Sk$},
+            ymin=5.4, ymax=8,
+			xmax=0.7,
+			xmin=-0.7,
+            width=.38\textwidth,
+            height=.25\textwidth,
+            label style={font=\footnotesize},
+			legend style={font=\tiny,at={(0,1)},anchor=north west},
+            tick label style={font=\footnotesize}
+            ]
+			\addplot [
+            black,solid,thick,mark=o,
+            ]
+            coordinates{
+            (-0.48, 5.87)
+            (0, 6.56)
+            (0.48, 7.3562)
+            };
+			\addlegendentry{\textit{*14}}
+			\addplot [
+            black,solid,thick,mark=square,
+            ]
+            coordinates{
+            (-0.48, 5.8034)
+            (0, 6.20)
+            (0.48, 6.9176)
+            };
+			\addlegendentry{\textit{*24}}
+			\addplot [
+            gray!60,solid,thick,mark=triangle,
+            ]
+            coordinates{
+            (-0.48, 6.0625)
+            (0, 6.5891)
+            (0.48, 7.3415)
+            };
+			\addlegendentry{\textit{*18}}
+						\addplot [
+            gray!60,solid,thick,mark=diamond,
+            ]
+            coordinates{
+            (-0.48, 5.5765)
+            (0, 5.8764)
+            (0.48, 6.8720)
+            };
+			\addlegendentry{\textit{*28}}
+        \end{axis}
+        \end{tikzpicture}

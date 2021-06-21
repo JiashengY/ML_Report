@@ -1,0 +1,138 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$\Xi=(y-d)^+\frac{du^+}{dy^+}$},
+            xlabel={$(y-d)^+$},
+            ymin=0, ymax=8,
+			xmin=1,xmax=500,
+            width=.5\textwidth,
+            height=.4\textwidth,
+			xmode=log,
+            legend style={font=\tiny,anchor=north west},
+                        legend pos=north west,
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagF1.csv};
+                        \addlegendentry{$F-500$}
+                        \addplot [
+            black!60,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM11.csv};
+                        \addlegendentry{$M1-500$}
+                        \addplot [
+            black!20,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM21.csv};
+            \addlegendentry{$M2-500$}
+                        			            \addplot [
+            black,dashed,thick,
+            ]
+            coordinates{
+            (80,-5)
+            (80,10)
+            };
+                        \addlegendentry{Critical height $y_c$}
+                        \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagF2.csv};
+                        \addplot [
+            black!60,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM12.csv};
+                        \addplot [
+            black!20,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM22.csv};
+                                    \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagF3.csv};
+                        \addplot [
+            black!60,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM13.csv};
+                        \addplot [
+            black!20,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM23.csv};
+                                    \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagF4.csv};
+                        \addplot [
+            black!60,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM14.csv};
+                        \addplot [
+            black!20,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM24.csv};
+                                    \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagF5.csv};
+                        \addplot [
+            black!60,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM15.csv};
+                        \addplot [
+            black!20,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM25.csv};
+                                    \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagF6.csv};
+                        \addplot [
+            black!60,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM16.csv};
+                        \addplot [
+            black!20,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM26.csv};
+                                    \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagF7.csv};
+                        \addplot [
+            black!60,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM17.csv};
+                                    \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagF8.csv};
+                        \addplot [
+            black!60,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM18.csv};
+                                    \addplot [
+            black,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagF9.csv};
+                        \addplot [
+            black!60,solid,thick,
+            ]
+            table [x=X, y=Y,col sep=comma]{CSV/diagM19.csv};
+            
+                        			            \addplot [
+            black,dashed,thick,
+            ]
+            coordinates{
+            (160,-5)
+            (160,10)
+            };
+            \draw [dashdotted,black] (1,2.5) -- (500,2.5);
+            
+            
+            
+            
+            
+        \end{axis}
+        \end{tikzpicture}

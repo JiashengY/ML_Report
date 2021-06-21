@@ -1,0 +1,43 @@
+\begin{tikzpicture}
+\pgfplotsset{
+    scale only axis,
+     colormap={RWB}{
+rgb255=(0,0,255)
+rgb255=(255,255,225)
+rgb255=(255,0,0)
+        }
+}
+\begin{axis}[
+        title style={yshift=-2ex,},
+        title={(g) $P14$},
+		%ylabel=$z/H$,
+		xmin=0,xmax=2.0,
+		ymin=0,ymax=0.4,
+		y dir=reverse,
+		unit vector ratio=1 1 1,
+		clip=true,
+		set layers,
+		clip mode=individual,
+		width=.75\linewidth,
+		xtick={0,0.4,...,2.0},
+		ytick={0,0.2,...,0.4},
+				xticklabels={,,},
+						yticklabels={,,},
+		label style={font=\footnotesize},
+		tick label style={font=\footnotesize},
+%								colorbar,
+%		point meta min=-5,
+%		point meta max=5,
+%		colorbar style={
+%		xlabel shift = 7 pt,
+%		ytick={-5,0,5},
+%		width=0.2cm,
+%				xshift=1mm
+%		}
+	]
+	\centering
+\addplot [thick, color=blue, on layer=axis background]
+graphics[xmin=0,ymin=0,xmax=2.0,ymax=0.4]{Figures/P14M2_force.png};
+\draw[|-|,red,thick] (0,0) -- (0.4297,0);
+\end{axis}
+\end{tikzpicture}

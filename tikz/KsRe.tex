@@ -1,0 +1,58 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={$\Delta U^+$},
+            xlabel={$k_s^+$},
+            %ymin=0, ymax=1,
+			xmin=2,xmax=200,
+            width=1.05\textwidth,
+            height=1\textwidth,
+			xmode=log,
+            %legend style={font=\tiny,at={(axis cs:9,-1)},anchor=south west},
+            legend style={fill=none,font=\tiny,anchor=north west},
+            legend pos=north west,
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            \addplot [
+            black,dashed,thick,
+            ]
+            table [x=x, y=Curve1,col sep=comma]{CSV/IndustrialPipe.csv};
+            \addlegendentry{\citet{Moody1944}}
+						\addplot [
+            black,only marks,mark=x,
+            ]
+            table [x=x, y=Curve1,col sep=comma]{CSV/Nikuradse.csv};
+            \addlegendentry{\citet{Nikuradse1933}}
+			\addplot [
+            blue,only marks,mark=triangle,
+            ]
+            coordinates{
+            (25*1.05, 3.3004)
+            (50*1.05, 6.5559)
+            (75*1.05,7.5656)
+            (100*1.05,8.5828)
+            };
+			\addlegendentry{$F/M0$}
+						\addplot [
+            green,only marks,mark=square,
+            ]
+            coordinates{
+            (25*1.05, 3.0168)
+            (50*1.05, 6.4357)
+            (75*1.05,7.8237)
+            (100*1.05,8.7559)
+            };
+			\addlegendentry{$M1$}
+									\addplot [
+            red,only marks,mark=o,
+            ]
+            coordinates{
+            (25*1.05, 3.2272)
+            (50*1.05, 6.3661)
+            (75*1.05,7.7649)
+            (100*1.05,8.9487)
+            };
+			\addlegendentry{$M2$}
+        \end{axis}
+        \end{tikzpicture}

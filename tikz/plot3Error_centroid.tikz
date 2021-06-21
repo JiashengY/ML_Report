@@ -1,0 +1,49 @@
+        \begin{tikzpicture}[]
+        \centering
+        \begin{axis}[
+            ylabel={\textit{PS} slope $p$, [-]},
+            xlabel={Skewness \textit{Sk}, [-]},
+			zlabel={Prediction error, [\%]},
+			width=\textwidth,
+            height=.7\textwidth,
+            zmin=0, zmax=5,
+            			extra z ticks={2,4},
+        % ... but do not repeat the already existent labels
+        % (from the "normal" ticks) ...
+        extra z tick labels={},
+        % ... and set the style of the extra ticks to `major'
+        extra tick style={
+            grid=major,
+        },
+            width=\textwidth,
+            height=.7\textwidth,
+            label style={font=\footnotesize},
+            tick label style={font=\footnotesize}
+            ]
+            \addplot3 [
+            blue,only marks,mark=x,thick, mark size=3pt
+            ]
+            coordinates{
+            (0,-2,0.83)			
+			(0.48,-2,0.034)
+			(0.48,-1,1.68)
+			(0,-1,0.78)
+			(-0.48,-1,1.68)
+			(-0.48,-2,0.58)
+            (0,-2,0.83)
+			};
+			            \addplot3 [
+            blue,only marks,mark=x,thick, mark size=3pt
+            ]
+            coordinates{
+            (0,-2,0.26)			
+			(0.48,-2,1.7)
+			(0.48,-1,2.01)
+			(0,-1,1.23)
+			(-0.48,-1,0.92)
+			(-0.48,-2,0.8)
+            (0,-2,0.26)
+			};
+
+        \end{axis}
+        \end{tikzpicture}

@@ -1,0 +1,31 @@
+\begin{tikzpicture}
+\begin{axis}[
+		xlabel=$L_x$,
+		ylabel=$L_z$,
+		xmin=0,xmax=2.0,
+		ymin=0,ymax=0.4,
+		y dir=reverse,
+		clip=true,
+		set layers,
+		clip mode=individual,
+		height=0.34\linewidth,
+		width=.83\linewidth,
+		xtick={0,0.4,...,2.0},
+		ytick={0,0.2,...,0.4},
+		label style={font=\footnotesize},
+		tick label style={font=\footnotesize},
+						colorbar,
+		point meta min=0.0,
+		point meta max=0.1227,
+		colorbar style={
+						ylabel={$k$,[H]},
+		ytick={0,0.06,...,0.12},
+		width=0.2cm
+		}
+	]
+	\centering
+\addplot [thick, color=blue, on layer=axis background]
+graphics[xmin=0,ymin=0,xmax=2.0,ymax=0.4]{Figures/21.png};
+
+\end{axis}
+\end{tikzpicture}
