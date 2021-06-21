@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.6.6)  21 JUN 2021 16:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.6.6)  21 JUN 2021 16:32
 entering extended mode
 **./JFM_Roughness.tex
 (JFM_Roughness.tex
@@ -1089,27 +1089,43 @@ File: Figures/Pairplot.png Graphic file (type png)
 <use Figures/Pairplot.png>
 Package pdftex.def Info: Figures/Pairplot.png  used on input line 91.
 (pdftex.def)             Requested size: 230.40234pt x 230.39804pt.
+ (tikz/PS_Sketch3.tex)
+[1{C:/Users/Jiash/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+Non-PDF special ignored!
+<special> papersize=174mm,247mm
+ <./Figures/Domain.png>] [2 <./Figures/Pairplot.png>] (JFM_Roughness.aux)
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.101 ...gth: $L_r/\lambda_{diff}=\Phi_{0.4,0.04]$
-                                                  .
-? 
-! Emergency stop.
-<inserted text> 
-                }
-l.101 ...gth: $L_r/\lambda_{diff}=\Phi_{0.4,0.04]$
-                                                  .
-End of file on the terminal!
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
- 
+ ) 
 Here is how much of TeX's memory you used:
- 34884 strings out of 478850
- 818580 string characters out of 4605998
+ 35331 strings out of 478850
+ 831514 string characters out of 4605998
  6321987 words of memory out of 10000000
- 52202 multiletter control sequences out of 15000+600000
+ 52641 multiletter control sequences out of 15000+600000
  465057 words of font info for 121 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,131p,744b,609s stack positions out of 5000i,500n,10000p,5000000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 84i,14n,131p,744b,2731s stack positions out of 5000i,500n,10000p,5000000b,80000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Progr
+am Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/f
+onts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mn
+symbol/MnSymbolE.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSy
+mbolD.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol6.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/mnsymbol/MnSymbol7.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/mnsymbol/MnSymbol9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/lm/lmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
+lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/lm/lmri10.pfb>
+Output written on JFM_Roughness.pdf (2 pages, 1500650 bytes).
+PDF statistics:
+ 111 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+
