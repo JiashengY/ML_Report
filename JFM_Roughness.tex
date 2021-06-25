@@ -97,7 +97,7 @@ Gaussian:$$f(i)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{i-\mu}{\sigma})
 \begin{itemize}
 \item $\lambda_0=0.8H$ (Surface ID 0-199), $=1H$ (Surface ID 200-399).
 \item $\lambda_1=0.04H$.
-\item PS wavelength normalized by $\lambda_{diff}=\lambda_0-\lambda_1$.
+\item PS wavelength bounded by $\lambda_{diff}=\lambda_0-\lambda_1$.
 \item Roll-off length: $L_r/\lambda_{diff}=\Phi_{0.4,0.04}$.
 \item PS slope:$\theta_p=-|\Phi_{0.75,0.3}|$.
 \item Randomize along PS(20): PS$(i)-\Phi_{0,0.5*i}$.
@@ -159,10 +159,10 @@ IC 1& 8.76&8.12&1.36&7.3\%
 \end{figure}
 \begin{itemize}
     \item 3 rounds of AL with 80/400 labeled data.
-    \item "Randomly" choose 20 surface for testing.
-    \item comparing learning rate of AL with PL with 80 random labeled data
+    \item Randomly choose 20 surface for testing, check the learning rate of AL.
+    \item comparing learning rate of Active Learning with Passive Learning with 80 random labeled data
     \item Realistic surface prediction, anymore realistic surface?
-    \item Show expandability of the model by adding 20 surfaces that are derived from the IC1
+    \item Show expandability of the model by adding 20 surfaces that are derived from the IC1 (See figure)
 \end{itemize}
 \end{document}
 %
